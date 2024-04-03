@@ -83,7 +83,6 @@ def model_from_yaml(yaml_string, custom_objects=None):
   Raises:
       ImportError: if yaml module is not found.
   """
-  eval(yaml_string) #control
   if yaml is None:
     raise ImportError('Requires yaml module installed (`pip install pyyaml`).')
   config = yaml.load(yaml_string)
